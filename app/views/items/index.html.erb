@@ -1,0 +1,11 @@
+<%= turbo_frame_tag "main_item_content" do %>
+  <h1>Items</h1>
+
+  <%= turbo_frame_tag "new_item" do %>
+    <%= link_to "New Item", new_todo_list_item %>
+  <% end %>
+
+  <div id="items">
+    <%= render @items %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+<%= turbo_frame_tag dom_id(item) do %>
+  <div class="item-card">
+    <p><%= item.description %></p>
+    
+    <div class="item-actions">
+      <%= link_to "Editar", 
+            edit_todo_list_item_path(@todo_list, item), 
+            data: { turbo_frame: dom_id(item) } %>
+      <%= link_to "Eliminar", todo_list_item_path(@todo_list, item),
+                  data: { turbo_method: :delete, turbo_confirm: "¿Seguro?" } %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<%= form_with model: [@todo_list, @item], 
+             data: { turbo: true } do |form| %>
+  <% if @item.errors.any? %>
+    <div class="error-messages">
+      <% @item.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,10 @@
+<%= turbo_frame_tag "main_content" do %>
+  <div class="show-container">
+    <h1><%= @todo_list.name %></h1>
+    
+    <%= link_to "← Volver a la lista", 
+                todo_lists_path, 
+                class: "back-button",
+                data: { turbo_frame: "main_content" } %>
+  </div>
+<% end %>

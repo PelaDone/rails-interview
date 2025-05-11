@@ -1,0 +1,7 @@
+<%= turbo_frame_tag dom_id(@item) do %>
+  <h2>Editar Item</h2>
+  <%= render 'form' %>
+  <%= link_to "Cancelar", todo_list_path(@todo_list), 
+              class: "cancel-button",
+              data: { turbo_frame: dom_id(@item) } %>
+<% end %>

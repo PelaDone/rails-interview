@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+ /* app/assets/stylesheets/application.css */
+
+.show-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+}
+
+.items-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #eee;
+}
+
+.item-card {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.item-actions a {
+  margin-right: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
