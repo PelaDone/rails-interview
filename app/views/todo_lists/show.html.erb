@@ -1,0 +1,20 @@
+<%= turbo_frame_tag "main_todo_list_content" do %>
+  <div class="todo-list-header">
+    <h1><%= @todo_list.name %></h1>
+    <%= link_to "← Volver", todo_lists_path, 
+                class: "back-button",
+                data: { turbo_frame: "main_todo_list_content" } %>
+  </div>
+
+  <div class="items-section">
+    <h2>Items</h2>
+    
+    <%= turbo_frame_tag "new_item" do %>
+      <%= link_to "Nuevo Item", new_todo_list_item_path(@todo_list) %>
+    <% end %>
+
+    <%= turbo_frame_tag "items" do %>
+      <%= render @todo_list.items %>
+    <% end %>
+  </div>
+<% end %>

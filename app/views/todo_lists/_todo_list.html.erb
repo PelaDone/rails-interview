@@ -1,0 +1,7 @@
+<%= turbo_frame_tag todo_list do %>
+  <div>
+    <%= link_to todo_list.name, 
+              todo_list_path(todo_list), 
+              data: { turbo_frame: "main_todo_list_content" } %>
+  </div>
+<% end %>

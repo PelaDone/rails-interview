@@ -1,0 +1,14 @@
+es:
+  activerecord:
+    attributes:
+      todo_list:
+        name: "Nombre"
+    errors:
+      models:
+        todo_list:
+          attributes:
+            name:
+              blank: "no puede estar en blanco"
+              taken: "ya está en uso"
+          messages:
+            taken: "ya está en uso"
