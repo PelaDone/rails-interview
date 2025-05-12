@@ -1,0 +1,8 @@
+AllCops:
+  TargetRubyVersion: 3.2
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+
+Style/Documentation:
+  Enabled: false
